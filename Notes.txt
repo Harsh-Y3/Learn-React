@@ -1,0 +1,5 @@
+React is a library
+
+-> react dom for web devlopmant
+-> react native for mobile applications
+

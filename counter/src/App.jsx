@@ -5,31 +5,52 @@ import './App.css'
 
 function App() {
 
-  const [counter, setCounter] = useState(5)
+  const [counter, setCounter] = useState(0)
   
   // let counter = 5
   const addValue = () =>
   {
-    setCounter(counter + 1)
+    if ( counter <= 19)
+    {
+    setCounter( counter + 1 )
+    }
+    else
+    {
+      alert("maximum value reached");
+    }
   }
 
   const removeValue = () =>
   {
-    setCounter(counter - 1)
+    if ( counter >= 1)
+      {
+      
+         setCounter( counter - 1 )
+      }
+      else
+      {
+        alert("cant go in nagative integer");
+      }
   }
 
   return (
     <>
       
-      <h1>Hello react</h1>
+      <h1>Counter</h1>
+      <p>Simple react app that shows numbers from 0 to 20 by clicking on buttons</p>
+
       <h2>Counter value: {counter}</h2>
+
       <button
         onClick={addValue}
-      >Add {counter + 1}</button>
+      >Go To Next Number: {counter + 1} </button>
+
       <br />
+      <br />
+
       <button
         onClick={removeValue}
-      >Remove {counter - 1}</button>
+      >Go To Prior Number: {counter - 1 } </button>
         
     </>
   )
